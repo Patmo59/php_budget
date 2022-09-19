@@ -1,0 +1,17 @@
+#le .htacces est lu par *apache à caque requète au serveur
+# On va activer l'outil de réecriture d'url
+
+               RewriteEngine On
+
+#On va ajouter une condition à notre réecriture sous forme de REGEX
+
+               RewriteCond %{REQUEST_URI} !(\.png|\.jpg|\.css|\.js|\.ico|.scss)$
+
+#On lui indique comment réécrire l'url
+
+              RewriteRule (.*) routeur/root.php [QSA,L]
+
+#(.*) est une regex indiquant ce qui doit être réécrit
+#index.php , par quoi on remplace l'ancienne url
+#les flags [QSA, L] permettent :
+    #QSA permet de garder les parametres  get actifs.
