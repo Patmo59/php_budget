@@ -10,7 +10,7 @@ define("ROUTES", [
 "liste"=> "./users/read.php",
 "maj"=> "./users/update.php",
 "profil"=> "./users/profil.php",
-"suppr"=> "./users/delete.php",
+"suppr"=> "./users/list.php",
 "deconnexion"=> "./service/deconnexion.php",
 //Page Aide
 "aide"=> "../aide/_aidePresentation.php", // ! donc il faut un "."supplémentaire pour acceder à "aide"

@@ -17,7 +17,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"]))
         $pass = trim($_POST["password"]);
     }
     if(empty($error)){
-        require __DIR__."/../../service/_pdo.php";//_pdo.php
+        require __DIR__."/../../service/_pdo.php";
         $pdo = connexionPDO();
         $sql = $pdo->prepare("SELECT * FROM users WHERE email = ?");
         $sql->execute([$email]);

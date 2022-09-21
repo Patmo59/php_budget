@@ -13,38 +13,10 @@
 <body>
 <header>
         <h1>Budget - <?php echo $headerTitle?? "Budget" ?></h1>
+        <h3><?php echo (isset($_SESSION["logged"]) && $_SESSION["logged"])?$_SESSION["username"]. " est connecté":"" ?></h3>
 </header> 
 <main class="<?php echo $mainClass??"" ?>">
-<?php //! a revoir
-// if(isset($headerTitle)){
-//     switch(isset($headerTitle)){
-//         case 'inscription':
-//             require __DIR__.$import;
-//             break;
-//         case 'liste':
-//             require __DIR__.$import;
-//             break;
-//         case 'maj':
-//             require __DIR__.$import;
-//             break;
-//         case 'profil':
-//             require __DIR__.$import;
-//             break;
-//     }
-// }
-
-// if($headerTitle == "inscription"){
-//     require __DIR__."/../pages/users/create.php";
-// }
-// if($headerTitle == "liste"){
-//     require __DIR__."/../pages/users/read.php";
-// }
-// if($headerTitle == "maj"){
-//     require __DIR__."/../pages/users/update.php";
-// }
-// if($headerTitle == "ptofil"){
-//     require __DIR__."/../pages/users/profil.php";
-// }
 
 
-?>
+
+
